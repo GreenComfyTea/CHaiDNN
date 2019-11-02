@@ -23,6 +23,8 @@
 
 8. Select **Empty Application** and click **Finish**.
 
+9. Download CHaiDNN from the Xilinx repository. <a href="https://github.com/Xilinx/CHaiDNN">Link</a>. Beware of changes! When this guide was written the last commit to the master branch was ad3be78 from Oct 23, 2018.
+
 9. From **Project Explorer** Pane, Right Click on the `src` directory under the created project and click **Import**.
    The **Import wizard** appears.
 
@@ -97,7 +99,7 @@
 
 25. Apply changes and close the window.
 
-26. Open `<path to project>/src/design/scripts/mcps.tcl` file and modify the path of `xdc` file as shown below.
+26. Open `<path to project>/src/design/conv/scripts/mcps.tcl` file and modify the path of `xdc` file as shown below.
     ```
     read_xdc <path to project>/src/design/conv/scripts/mcp_const.xdc
     ```
@@ -105,7 +107,7 @@
 
 28. Open `project.sdx` file, change the `Data motion network clock frequency (MHz)` to 100.00.
 
-29. Open `xi_conv_config.h` file and modify `lines 28-30, 43` as shown below.
+29. Open `<path to project>/src/design/conv/include/xi_conv_config.h` file and modify `lines 28-30, 43` as shown below.
      ```   
      #define XI_WTS_URAM_EN   1
      #define XI_ISTG_URAM_EN  1
@@ -114,33 +116,33 @@
      #define XI_PIX_PROC      16
      ```
      
-29. Open `xi_convolution_top.cpp` file and modify `lines 17, 18` as shown below.
+29. Open `<path to project>/src/design/conv/src/xi_convolution_top.cpp` file and modify `lines 17, 18` as shown below.
      ```   
      #include "../include/xi_conv_config.h"
      #include "../include/xi_conv_desc.h"
      ```
      
-30. Open `xi_deconv_top.cpp` file and modify `line 19` as shown below.
+30. Open `<path to project>/src/design/deconv/src/xi_deconv_top.cpp` file and modify `line 19` as shown below.
      ```   
      #include "../include/xi_deconv_config.h"
      ```
      
-31. Open `pooling_layer_dp_2xio_top.cpp` file and add include after `line 18` as shown below.
+31. Open `<path to project>/src/design/pool/src/pooling_layer_dp_2xio_top.cpp` file and add include after `line 18` as shown below.
      ```   
-     add #include <stdio.h>
+     #include <stdio.h>
      ```    
      
-32. Open `dnn_wrapper.cpp` file and add modify `line 18` as shown below.
+32. Open `<path to project>/src/design/wrapper/dnn_wrapper.cpp` file and add modify `line 18` as shown below.
      ```   
      #include "../conv/include/xi_conv_config.h"
      ```    
 
-33. Open `hw_settings.h` file and add modify `line 40` as shown below.
+33. Open `<path to project>/src/software/include/hw_settings.h` file and add modify `line 40` as shown below.
      ```   
      #define XI_PIX_PROC       	16
      ```
      
-34. Open `xi_eltwiswadd_top.cpp` file and add modify `line 38` as shown below.
+34. Open `<path to project>/src/software/swkernels/xi_eltwiswadd_top.cpp` file and add modify `line 38` as shown below.
      ```   
      #ifndef __SDSOC
      ``` 

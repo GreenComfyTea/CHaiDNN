@@ -1,0 +1,1 @@
+read_xdc <path to project>/src/design/conv/scripts/mcp_const.xdc
