@@ -59,15 +59,7 @@
 
 19. In `Directories`, add below paths
     ```
-    <path to libraries>/opencv/arm64/include
-    <path to libraries>/protobuf/arm64/include
-    <path to libraries>/cblas/arm64/include
-    <path to project>/src/design/conv/include
-    <path to project>/src/design/conv/src
-    <path to project>/src/design/pool/include
-    <path to project>/src/design/pool/src
-    <path to project>/src/design/deconv/include
-    <path to project>/src/design/deconv/src
+    <path to libraries>/opencv/arm64/include;<path to libraries>/protobuf/arm64/include;<path to libraries>/cblas/arm64/include;<path to project>/src/design/conv/include;<path to project>/src/design/conv/src;<path to project>/src/design/pool/include;<path to project>/src/design/pool/src;<path to project>/src/design/deconv/include;<path to project>/src/design/deconv/src
     ```
     >**:pushpin: NOTE:**  `<path to libraries>` is the path to `SD_Card` directory in local `CHaiDNN` repository. `<path to project>` is the path to SDx project.
 
@@ -84,9 +76,7 @@
 
  22. Add library paths
      ```   
-     <path to libraries>/opencv/arm64/lib
-     <path to libraries>/protobuf/arm64/lib
-     <path to libraries>/cblas/arm64/lib
+     <path to libraries>/opencv/arm64/lib;<path to libraries>/protobuf/arm64/lib;<path to libraries>/cblas/arm64/lib
      ```
      >**:pushpin: NOTE:**  **Note:** `<path to libraries>` is the path to `SD_Card` directory in local `CHaiDNN` repository.
 
