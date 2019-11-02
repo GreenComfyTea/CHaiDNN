@@ -3,8 +3,8 @@
 <table style="width:100%">
 <tr><th colspan="2"></th></tr>
 <tr>
-	<td align="center"><a href="./docs/SUPPORTED_LAYERS.md">Build using this modified repo</a></td>
-	<td align="center"><a href="./docs/PERFORMANCE_EVAL.md">Build using original Xilinx repo</a></td>	
+	<td align="center"><a href="./docs/BUILD_USING_GREENTEA_REPO.md">Build using this modified repo</a></td>
+	<td align="center"><a href="./docs/BUILD_USING_XILINX_REPO.md">Build using original Xilinx repo</a></td>	
 </tr>
   <tr><th colspan="2"></th></tr>
 </table>
