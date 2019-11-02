@@ -69,12 +69,14 @@
     <path to project>/src/design/deconv/include
     <path to project>/src/design/deconv/src
     ```
-    >**:pushpin: NOTE:**  `<path to libraries>` is the path to `SD_Card` directory in local `CHaiDNN` repository.`<path to project>` is the path to SDx project.
+    >**:pushpin: NOTE:**  `<path to libraries>` is the path to `SD_Card` directory in local `CHaiDNN` repository. `<path to project>` is the path to SDx project.
 
 20. In `SDS++ Linker` add the following in the `command`
     ```
     sds++ -xp param:compiler.skipTimingCheckAndFrequencyScaling=1 -xp "vivado_prop:run.impl_1.{STEPS.OPT_DESIGN.ARGS.MORE OPTIONS}={-directive Explore}"  -xp "vivado_prop:run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-directive Explore}" -xp "vivado_prop:run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=1" -xp "vivado_prop:run.impl_1.{STEPS.PHYS_OPT_DESIGN.ARGS.MORE OPTIONS}={-directive Explore}" -xp "vivado_prop:run.impl_1.{STEPS.ROUTE_DESIGN.ARGS.MORE OPTIONS}={-directive Explore}" -xp "vivado_prop:run.synth_1.{STEPS.SYNTH_DESIGN.TCL.PRE}={<path to design>/conv/scripts/mcps.tcl}" -xp "vivado_prop:run.impl_1.{STEPS.PLACE_DESIGN.TCL.PRE}={<path to design>/conv/scripts/mcps.tcl}" -Wno-unused-label
     ```
+    >**:pushpin: NOTE:**   `<path to design>` is the path to the project's `src/design` folder.
+    
  21. In `SDS++ Linker`, Select `Libraries` and add the following libs
      ```
      opencv_core;lzma;tiff;png16;z;jpeg;opencv_imgproc;opencv_imgcodecs;dl;rt;webp;protobuf;openblas
@@ -90,12 +92,12 @@
 
 23. Save and apply changes. Close the settings window.
 
-24. Navigate to `<project name>/src/software/init` folder in `Project Explorer` Pane. Right click on `xi_init.cpp` and open the properties.
+24. Navigate to `<path to project>/src/software/init` folder in `Project Explorer` Pane. Right click on `xi_init.cpp` and open the properties.
     In Optimization, change the `Optimization Level` to None (-O0).
 
 25. Apply changes and close the window.
 
-26. Open `<project name>/src/design/scripts/mcps.tcl` file and modify the path of `xdc` file as shown below.
+26. Open `<path to project>/src/design/scripts/mcps.tcl` file and modify the path of `xdc` file as shown below.
 ```
     read_xdc <path to project>/src/design/conv/scripts/mcp_const.xdc
 ```
