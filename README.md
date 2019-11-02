@@ -114,33 +114,33 @@
      #define XI_PIX_PROC      16
      ```
      
-29. Open 'xi_convolution_top.cpp' file and modify 'lines 17, 18' as shown below.
+29. Open `xi_convolution_top.cpp` file and modify `lines 17, 18` as shown below.
      ```   
      #include "../include/xi_conv_config.h"
      #include "../include/xi_conv_desc.h"
      ```
      
-30. Open 'xi_deconv_top.cpp' file and modify 'line 19' as shown below.
+30. Open `xi_deconv_top.cpp` file and modify `line 19` as shown below.
      ```   
      #include "../include/xi_deconv_config.h"
      ```
      
-31. Open 'pooling_layer_dp_2xio_top.cpp' file and add include after 'line 18' as shown below.
+31. Open `pooling_layer_dp_2xio_top.cpp` file and add include after `line 18` as shown below.
      ```   
      add #include <stdio.h>
      ```    
      
-32. Open 'dnn_wrapper.cpp' file and add modify 'line 18' as shown below.
+32. Open `dnn_wrapper.cpp` file and add modify `line 18` as shown below.
      ```   
      #include "../conv/include/xi_conv_config.h"
      ```    
 
-33. Open 'hw_settings.h' file and add modify 'line 40' as shown below.
+33. Open `hw_settings.h` file and add modify `line 40` as shown below.
      ```   
      #define XI_PIX_PROC       	16
      ```
      
-34. Open 'xi_eltwiswadd_top.cpp' file and add modify 'line 38' as shown below.
+34. Open `xi_eltwiswadd_top.cpp` file and add modify `line 38` as shown below.
      ```   
      #ifndef __SDSOC
      ``` 
