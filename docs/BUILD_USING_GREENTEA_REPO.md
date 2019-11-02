@@ -75,7 +75,7 @@
 
 20. In `SDS++ Linker` add the following in the `command`
     ```
-    sds++ -xp param:compiler.skipTimingCheckAndFrequencyScaling=1 -xp "vivado_prop:run.impl_1.{STEPS.OPT_DESIGN.ARGS.MORE OPTIONS}={-directive Explore}"  -xp "vivado_prop:run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-directive Explore}" -xp "vivado_prop:run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=1" -xp "vivado_prop:run.impl_1.{STEPS.PHYS_OPT_DESIGN.ARGS.MORE OPTIONS}={-directive Explore}" -xp "vivado_prop:run.impl_1.{STEPS.ROUTE_DESIGN.ARGS.MORE OPTIONS}={-directive Explore}" -xp "vivado_prop:run.synth_1.{STEPS.SYNTH_DESIGN.TCL.PRE}={<path to design>/conv/scripts/mcps.tcl}" -xp "vivado_prop:run.impl_1.{STEPS.PLACE_DESIGN.TCL.PRE}={<path to design>/conv/scripts/mcps.tcl}" -Wno-unused-label
+    sds++ -xp param:compiler.skipTimingCheckAndFrequencyScaling=1 -xp "vivado_prop:run.impl_1.{STEPS.OPT_DESIGN.ARGS.MORE OPTIONS}={-directive Explore}"  -xp "vivado_prop:run.impl_1.{STEPS.PLACE_DESIGN.ARGS.MORE OPTIONS}={-directive Explore}" -xp "vivado_prop:run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=1" -xp "vivado_prop:run.impl_1.{STEPS.PHYS_OPT_DESIGN.ARGS.MORE OPTIONS}={-directive Explore}" -xp "vivado_prop:run.impl_1.{STEPS.ROUTE_DESIGN.ARGS.MORE OPTIONS}={-directive Explore}" -xp "vivado_prop:run.synth_1.{STEPS.SYNTH_DESIGN.TCL.PRE}={<path to design>conv/scripts/mcps.tcl}" -xp "vivado_prop:run.impl_1.{STEPS.PLACE_DESIGN.TCL.PRE}={<path to design>/conv/scripts/mcps.tcl}" -Wno-unused-label
     ```
     >**:pushpin: NOTE:**   `<path to design>` is the path to the project's `src/design` folder.
     
@@ -99,7 +99,7 @@
 
 25. Apply changes and close the window.
 
-26. Open `<path to project>/src/design/conv/scripts/mcps.tcl` file and modify the path of `xdc` file as shown below.
+26. Open `<path to project>/src/design/scripts/mcps.tcl` file and modify the path of `xdc` file as shown below.
     ```
     read_xdc <path to project>/src/design/conv/scripts/mcp_const.xdc
     ```
@@ -107,4 +107,4 @@
 
 28. Open `project.sdx` file, change the `Data motion network clock frequency (MHz)` to 100.00.
 
-35. Build the project.
+29. Build the project.
