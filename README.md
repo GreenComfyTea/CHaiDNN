@@ -9,4 +9,4 @@
   <tr><th colspan="2"></th></tr>
 </table>
 
-The original CHaiDNN repo contains several errors and mistakes in paths and commands. The repo and tutorials here have these things fixed to simplify the process of creating and compiling a project. If you want to use the original repo then be prepared to fix errors by yourself and be aware of new commits and changes to the original repo if that happens.
+The original CHaiDNN repo contains several errors and mistakes in paths and commands. The repo and tutorials here have these things fixed to simplify the process of creating and compiling a project. It also contains the necessary changes to be able to compile CHaiDNN for ZCU104. If you want to use the original repo then be prepared to fix errors and apply changes for ZCU104 by yourself and be aware of new commits and changes to the original repo if that happens.
