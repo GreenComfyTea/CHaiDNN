@@ -1,4 +1,4 @@
-## Building CHaiDNN in SDx 2018.3 on Windows 10 for Zynq UltraScale+ MPSoC ZCU104 
+## Building CHaiDNN in SDx 2018.3 on Windows 10 for Zynq UltraScale+ MPSoC ZCU104 using the original repository
 
 1. Launch the **SDx development environment** using the desktop icon or the Start menu.
    The **Workspace Launcher** dialog appears
