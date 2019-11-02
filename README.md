@@ -105,4 +105,43 @@
 
 28. Open `project.sdx` file, change the `Data motion network clock frequency (MHz)` to 100.00.
 
-29. Build the project.
+29. Open 'xi_conv_config.h' file and modify 'lines 28-30, 43' as shown below.
+     ```   
+     #define XI_WTS_URAM_EN   1
+     #define XI_ISTG_URAM_EN  1
+     #define XI_OSTG_URAM_EN  1
+     
+     #define XI_PIX_PROC      16
+     ```
+     
+29. Open 'xi_convolution_top.cpp' file and modify 'lines 17, 18' as shown below.
+     ```   
+     #include "../include/xi_conv_config.h"
+     #include "../include/xi_conv_desc.h"
+     ```
+     
+30. Open 'xi_deconv_top.cpp' file and modify 'line 19' as shown below.
+     ```   
+     #include "../include/xi_deconv_config.h"
+     ```
+     
+31. Open 'pooling_layer_dp_2xio_top.cpp' file and add include after 'line 18' as shown below.
+     ```   
+     add #include <stdio.h>
+     ```    
+     
+32. Open 'dnn_wrapper.cpp' file and add modify 'line 18' as shown below.
+     ```   
+     #include "../conv/include/xi_conv_config.h"
+     ```    
+
+33. Open 'hw_settings.h' file and add modify 'line 40' as shown below.
+     ```   
+     #define XI_PIX_PROC       	16
+     ```
+     
+34. Open 'xi_eltwiswadd_top.cpp' file and add modify 'line 38' as shown below.
+     ```   
+     #ifndef __SDSOC
+     ``` 
+35. Build the project.
