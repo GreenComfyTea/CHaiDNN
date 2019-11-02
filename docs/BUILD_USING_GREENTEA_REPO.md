@@ -6,7 +6,7 @@
 2. Click **Browse** to enter a workspace folder used to store your projects (you can use workspace folders to organize your work), then click **OK** to dismiss the **Workspace Launcher** dialog.
     The SDx development environment window opens with the **Welcome** tab visible when you create a new workspace. The Welcome tab can be closed by clicking the **X** icon or minimized if you do not wish to use it.
 
-3. Select **File → New → SDx Application Project ** from the SDx development environment menu bar.
+3. Select **File → New → SDx Application Project** from the SDx development environment menu bar.
     The **New SDx Project** dialog box opens.
 
 4. Specify the name of the project. For example `CHaiDNN`.
