@@ -98,14 +98,14 @@
 25. Apply changes and close the window.
 
 26. Open `<path to project>/src/design/scripts/mcps.tcl` file and modify the path of `xdc` file as shown below.
-```
+    ```
     read_xdc <path to project>/src/design/conv/scripts/mcp_const.xdc
-```
->**:pushpin: NOTE:**   `<path to project>` is the path to SDx project.
+    ```
+    >**:pushpin: NOTE:**   `<path to project>` is the path to SDx project.
 
 28. Open `project.sdx` file, change the `Data motion network clock frequency (MHz)` to 100.00.
 
-29. Open 'xi_conv_config.h' file and modify 'lines 28-30, 43' as shown below.
+29. Open `xi_conv_config.h` file and modify `lines 28-30, 43` as shown below.
      ```   
      #define XI_WTS_URAM_EN   1
      #define XI_ISTG_URAM_EN  1
