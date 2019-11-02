@@ -1,4 +1,4 @@
-## **Building CHaiDNN in SDx 2018.3 on Windows 10 for Zynq UltraScale+ MPSoC ZCU104 **
+## Building CHaiDNN in SDx 2018.3 on Windows 10 for Zynq UltraScale+ MPSoC ZCU104 
 
 1. Launch the **SDx development environment** using the desktop icon or the Start menu.
    The **Workspace Launcher** dialog appears
@@ -50,12 +50,10 @@
 16. In `Symbols`, add the following defined symbols
     ```
     __SDSOC;__CONV_ENABLE__;__DSP48E2__
-
     ```
 17. Add the following undefined symbols
     ```
     __SYNTHESIS__;__POOL_ENABLE__;__DECONV_ENABLE__
-
     ```
 18. In `Optimization` set the Optimization Level to None (-O0).
 
