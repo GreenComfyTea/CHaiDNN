@@ -129,7 +129,7 @@
      
 31. Open `<path to project>/src/design/pool/src/pooling_layer_dp_2xio_top.cpp` file and add include after `line 18` as shown below.
      ```   
-     add #include <stdio.h>
+     #include <stdio.h>
      ```    
      
 32. Open `<path to project>/src/design/wrapper/dnn_wrapper.cpp` file and add modify `line 18` as shown below.
